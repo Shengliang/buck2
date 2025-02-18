@@ -1,0 +1,6 @@
+cxx_library(
+    name = "Config",
+    exported_headers = ["config.hpp"],  # Export config.hpp
+    public_include_directories = ["."],  # Add current directory to include path
+    visibility = ["PUBLIC"],  # Make it visible to other targets
+)

@@ -1,0 +1,16 @@
+cxx_library(
+    name = "Common1",
+    srcs = ["Common.cpp"],
+    exported_headers = ["Common.hpp"],
+    public_include_directories = ["."],
+    deps = ["//libC1:Config"],
+    visibility = ["PUBLIC"],
+)
+cxx_library(
+    name = "Common2",
+    srcs = ["Common.cpp"],
+    exported_headers = ["Common.hpp"],
+    public_include_directories = ["."],
+    deps = ["//libC2:Config"],
+    visibility = ["PUBLIC"],
+)

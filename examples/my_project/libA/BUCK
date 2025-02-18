@@ -1,0 +1,16 @@
+cxx_library(
+    name = "A1",
+    srcs = ["A.cpp"],
+    exported_headers = ["A.hpp"],
+    public_include_directories = ["."],  # Add current directory to include path
+    deps = ["//libCommon:Common1", "//libC1:Config"],
+    visibility = ["PUBLIC"],
+)
+cxx_library(
+    name = "A2",
+    srcs = ["A.cpp"],
+    exported_headers = ["A.hpp"],
+    public_include_directories = ["."],  # Add current directory to include path
+    deps = ["//libCommon:Common2", "//libC2:Config"],
+    visibility = ["PUBLIC"],
+)
