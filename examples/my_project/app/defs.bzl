@@ -1,0 +1,10 @@
+def create_app(x):
+    native.cxx_binary(
+        name = "app{}".format(x),
+        srcs = ["main.cpp"],
+        deps = ["//libA:A{}".format(x),
+            "//libB:B{}".format(x),
+            "//libCommon:Common{}".format(x),
+            "//libC{}:Config".format(x)],
+        linker_flags = ["-Wl,-rpath=$ORIGIN"]
+    )

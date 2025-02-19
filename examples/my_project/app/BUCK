@@ -1,12 +1,3 @@
-cxx_binary(
-    name = "app1",
-    srcs = ["main.cpp"],
-    deps = ["//libA:A1", "//libB:B1", "//libCommon:Common1", "//libC1:Config"],
-    linker_flags = ["-Wl,-rpath=$ORIGIN"]
-)
-cxx_binary(
-    name = "app2",
-    srcs = ["main.cpp"],
-    deps = ["//libA:A2", "//libB:B2", "//libCommon:Common2", "//libC2:Config"],
-    linker_flags = ["-Wl,-rpath=$ORIGIN"]
-)
+load("//app:defs.bzl", "create_app")
+create_app(1)
+create_app(2)

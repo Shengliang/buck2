@@ -1,16 +1,3 @@
-cxx_library(
-    name = "B1",
-    srcs = ["B.cpp"],
-    exported_headers = ["B.hpp"],
-    public_include_directories = ["."],  # Add current directory to include path
-    deps = ["//libCommon:Common1", "//libC1:Config"],
-    visibility = ["PUBLIC"],
-)
-cxx_library(
-    name = "B2",
-    srcs = ["B.cpp"],
-    exported_headers = ["B.hpp"],
-    public_include_directories = ["."],  # Add current directory to include path
-    deps = ["//libCommon:Common2", "//libC2:Config"],
-    visibility = ["PUBLIC"],
-)
+load("//libB:defs.bzl", "create_libB")
+create_libB(1)
+create_libB(2)
