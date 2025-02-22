@@ -1,3 +1,2 @@
 load("//libCommon:defs.bzl", "create_libCommon")
-create_libCommon(1)
-create_libCommon(2)
+create_libCommon()

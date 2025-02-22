@@ -1,3 +1,2 @@
 load("//libB:defs.bzl", "create_libB")
-create_libB(1)
-create_libB(2)
+create_libB()
